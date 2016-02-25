@@ -80,7 +80,7 @@ public class HexReader {
         
         while (!fileToSet.exists()) {
             System.out.println("ERROR: FILE DOES NOT EXIST OR COULD NOT CREATE FILE Object");
-            System.out.println("SELECT External FILE: ");
+            System.out.println("SELECT External FILEz: ");
             fileToSet = new File(scanner.next());
         }
         System.out.println("File Set success");
