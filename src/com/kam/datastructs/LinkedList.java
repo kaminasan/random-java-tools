@@ -58,22 +58,22 @@ public class LinkedList<E> {
      public void pop(){
          if(this.size == 0){
              System.out.println("Error: list Empty");
-             return;
+             
          }
-         if(this.size == 1){
+         else if(this.size == 1){
             this.head.setNext(null);
              tail = null;
              size--;
          }
          else{
-             Node currNode = this.head;
-             Node previousNode = null;
-             while(currNode != null){
-              if(currNode.getNext() == null){
-                  previousNode.setNext(null);
-                  tail = previousNode;
+             Node currNode = this.head.next; //start withthe node past the head. If it is null, we have a size 0 list.
+             Node previousNode = this.head;
+             while(currNode != null){  //we will go across the List as long as our current Node != null
+              if(currNode.getNext() == null){ //if our currentNodes next pointer is null, we are at the last Node in the list
+                  previousNode.setNext(null); //We are deleting the current Node, as it is the last item. 
+                  tail = previousNode;  //tail is now the previous node.
                   size--;
-                  return;
+                  
               } 
               else{
                   previousNode = currNode;
