@@ -21,6 +21,7 @@ public class NonRecursiveDirectoryCopy {
      * is definitely easier to write, the possibility of running out of
      * memory(stack space) is real, hence the use of two stacks to simulate
      * recursion, and a simple while loop.
+     * Has not been written for wide use, as the start files are fixed. 
      *
      * @param args
      */
